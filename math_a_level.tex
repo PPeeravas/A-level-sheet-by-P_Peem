@@ -1,0 +1,109 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{เอกสารประกอบการติว A-Level คณิตศาสตร์}
+\author{พี่ภีม วิศวะ คอม จุฬา}
+\date{}
+\maketitle
+
+\section{เซต (Set)}
+
+\subsection{ความรู้เบื้องต้นเกี่ยวกับเซต}
+เซต (Set) หมายถึงกลุ่มของสิ่งต่าง ๆ ที่แน่นอนและเป็นจริงเสมอ เช่น กลุ่มของจำนวนนับที่ไม่เกิน 4 ถือว่าเป็นเซต 
+เพราะสามารถระบุได้แน่นอนว่ากลุ่มนั้นประกอบด้วย $\{1,2,3,4\}$.
+
+\subsection{สัญลักษณ์แทนเซต}
+โดยทั่วไปนิยมเขียนสัญลักษณ์แทนเซตด้วยตัวอักษรภาษาอังกฤษพิมพ์ใหญ่ เช่น $A, B, C, \dots$
+
+ตัวอย่างของเซตที่ใช้บ่อย:
+\begin{itemize}
+    \item $\mathbb{R}$ คือ เซตของจำนวนจริง
+    \item $\mathbb{N}$ คือ เซตของจำนวนนับ
+    \item $\mathbb{Z}$ คือ เซตของจำนวนเต็ม
+    \item $\mathbb{Q}$ คือ เซตของจำนวนตรรกยะ
+\end{itemize}
+
+\subsection{การเขียนแทนเซต}
+เซตสามารถเขียนแทนได้สองแบบ:
+\begin{enumerate}
+    \item \textbf{การเขียนแบบแจกแจงสมาชิก} เช่น
+          \begin{itemize}
+              \item $A = \{1,2,3,4,5\}$
+              \item $B = \{\text{วันจันทร์, วันอังคาร, ..., วันอาทิตย์}\}$
+          \end{itemize}
+    \item \textbf{การเขียนแบบบอกเงื่อนไขของสมาชิก} เช่น
+          \begin{itemize}
+              \item $A = \{x \mid x < 10, x \in \mathbb{N} \}$
+          \end{itemize}
+\end{enumerate}
+
+\subsection{ชนิดของเซต}
+\begin{itemize}
+    \item \textbf{เซตจำกัด} คือ เซตที่สามารถบอกจำนวนสมาชิกได้แน่นอน เช่น เซตของจังหวัดในประเทศไทย
+    \item \textbf{เซตอนันต์} คือ เซตที่มีจำนวนสมาชิกไม่จำกัด เช่น เซตของจำนวนเต็มบวก
+\end{itemize}
+
+\subsection{เซตที่เท่ากันและสับเซต}
+\textbf{นิยาม:} เซต $A$ และ $B$ จะเท่ากันก็ต่อเมื่อทั้งสองเซตมีสมาชิกเหมือนกันทุกตัว \\
+
+\textbf{สับเซต:} ถ้า $A$ เป็นสับเซตของ $B$ เขียนแทนด้วย $A \subseteq B$
+
+\section{ตรรกศาสตร์ (Logic)}
+\subsection{ประพจน์}
+ประพจน์ (Proposition) คือ ประโยคที่เป็นจริง (T) หรือเป็นเท็จ (F) อย่างใดอย่างหนึ่งเท่านั้น
+
+ตัวอย่าง:
+\begin{itemize}
+    \item $7 > 3$ (T)
+    \item เดือนสิงหาคมมี 30 วัน (F)
+\end{itemize}
+
+\subsection{ตัวเชื่อมตรรกศาสตร์}
+\begin{itemize}
+    \item และ ($\land$)
+    \item หรือ ($\lor$)
+    \item ถ้า...แล้ว ($\rightarrow$)
+    \item ก็ต่อเมื่อ ($\leftrightarrow$)
+    \item นิเสธ ($\neg$)
+\end{itemize}
+
+\subsection{ตารางค่าความจริง}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$P$ & $Q$ & $P \land Q$ & $P \lor Q$ & $P \rightarrow Q$ \\
+\hline
+T & T & T & T & T \\
+T & F & F & T & F \\
+F & T & F & T & T \\
+F & F & F & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{ระบบจำนวนจริง (Real Number System)}
+\subsection{โครงสร้างของระบบจำนวนจริง}
+\begin{itemize}
+    \item จำนวนจริง ($\mathbb{R}$) 
+    \item จำนวนตรรกยะ ($\mathbb{Q}$) เช่น $\frac{1}{2}, 0.75, -3$
+    \item จำนวนอตรรกยะ เช่น $\pi, \sqrt{2}$
+    \item จำนวนเต็ม ($\mathbb{Z}$)
+    \item จำนวนเต็มบวก ($\mathbb{Z}^+$)
+    \item จำนวนเต็มลบ ($\mathbb{Z}^-$)
+    \item จำนวนนับ ($\mathbb{N}$)
+\end{itemize}
+
+\section{แบบฝึกหัด}
+\begin{enumerate}
+    \item กำหนดให้ $A = \{1,2,3,4,5\}$ และ $B = \{3,4,5,6,7\}$ จงหา $A \cap B$
+    \item ตรวจสอบว่า $p \rightarrow q$ เป็นสัจนิรันดร์หรือไม่
+    \item จงหาสับเซตของเซต $\{a,b,c\}$
+\end{enumerate}
+
+\end{document}
